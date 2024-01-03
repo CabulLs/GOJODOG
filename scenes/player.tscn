@@ -1,6 +1,7 @@
-[gd_scene load_steps=54 format=3 uid="uid://30ei8gqf5ckk"]
+[gd_scene load_steps=55 format=3 uid="uid://30ei8gqf5ckk"]
 
 [ext_resource type="Texture2D" uid="uid://drtsrdbcr1r8v" path="res://art/characters/player.png" id="1_1bot2"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_kdon0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fcad1"]
 atlas = ExtResource("1_1bot2")
@@ -415,13 +416,14 @@ animations = [{
 [node name="player" type="CharacterBody2D"]
 position = Vector2(522, 322)
 scale = Vector2(-9.96328, 4.24069)
+script = ExtResource("1_kdon0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(43.8274, -58.026)
+scale = Vector2(0.268925, 0.535907)
+sprite_frames = SubResource("SpriteFrames_de387")
+animation = &"side_idle"
+frame_progress = 0.150157
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1, 0.320866)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-12.0442, -5.42364)
-scale = Vector2(0.960114, 1.8163)
-sprite_frames = SubResource("SpriteFrames_de387")
-animation = &"side_idle"
-frame_progress = 0.714166
