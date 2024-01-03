@@ -3,9 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://drtsrdbcr1r8v" path="res://art/characters/player.png" id="1_1bot2"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_kdon0"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_arhq3"]
-radius = 1.70626
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_fcad1"]
 atlas = ExtResource("1_1bot2")
 region = Rect2(0, 384, 48, 48)
@@ -416,19 +413,23 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_arhq3"]
+radius = 0.401474
+
 [node name="player" type="CharacterBody2D"]
 position = Vector2(522, 322)
 scale = Vector2(-9.96328, 4.24069)
 script = ExtResource("1_kdon0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(29.7091, -15.7993)
-scale = Vector2(1, -2.32965)
-shape = SubResource("CircleShape2D_arhq3")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(29.5084, -25.9392)
-scale = Vector2(0.265327, 0.633353)
+position = Vector2(52.3924, -79.4682)
+scale = Vector2(0.100467, 0.221705)
 sprite_frames = SubResource("SpriteFrames_de387")
 animation = &"side_idle"
 frame_progress = 0.150157
+offset = Vector2(0, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(52.3924, -79.4682)
+scale = Vector2(1, -2.32965)
+shape = SubResource("CircleShape2D_arhq3")

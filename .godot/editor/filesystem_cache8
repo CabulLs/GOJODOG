@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1704279886
-player1.gd::GDScript::-1::1704279440::0::1::::<>CharacterBody2D<>::
+::res://::1704291394
+player1.gd::GDScript::-1::1704282827::0::1::::<>CharacterBody2D<>::
 ::res://art/::1704272054
 icon.svg::CompressedTexture2D::7529343132803818966::1704271549::1704272054::1::::<><>::
 ::res://art/characters/::1704271983
@@ -42,9 +42,9 @@ wooden.png::CompressedTexture2D::2336048139106124024::1669924500::1704271983::1:
 walls.png::CompressedTexture2D::3633232614795627224::1669924500::1704271983::1::::<><>::
 wooden_door.png::CompressedTexture2D::6040478437097441370::1669924500::1704271983::1::::<><>::
 wooden_door_b.png::CompressedTexture2D::7125994498428321609::1669924500::1704271983::1::::<><>::
-::res://scenes/::1704279878
-player.tscn::PackedScene::2017155963312917670::1704279878::0::1::::<><>::uid://drtsrdbcr1r8v::::res://art/characters/player.png
-player_1.tscn::PackedScene::2570995507920531499::1704279878::0::1::::<><>::res://player1.gd<>uid://drtsrdbcr1r8v::::res://art/characters/player.png
-world.tscn::PackedScene::3327622975384758751::1704279878::0::1::::<><>::
-::res://scripts/::1704275784
-player.gd::GDScript::-1::1704275784::0::1::::<>CharacterBody2D<>::
+::res://scenes/::1704287157
+player.tscn::PackedScene::2017155963312917670::1704287157::0::1::::<><>::uid://drtsrdbcr1r8v::::res://art/characters/player.png<>res://scripts/player.gd
+player_1.tscn::PackedScene::2570995507920531499::1704285205::0::1::::<><>::res://player1.gd<>uid://drtsrdbcr1r8v::::res://art/characters/player.png
+world.tscn::PackedScene::3327622975384758751::1704286632::0::1::::<><>::uid://dd3dq0178lfo::::res://art/objects/objects.png<>uid://rim8xgwejo65::::res://art/tilesets/grass.png<>uid://boj2860604sib::::res://art/tilesets/plains.png<>uid://30ei8gqf5ckk::::res://scenes/player.tscn
+::res://scripts/::1704285686
+player.gd::GDScript::-1::1704285686::0::1::::<>CharacterBody2D<>::
