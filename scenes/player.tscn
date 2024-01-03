@@ -1,7 +1,10 @@
-[gd_scene load_steps=55 format=3 uid="uid://30ei8gqf5ckk"]
+[gd_scene load_steps=56 format=3 uid="uid://30ei8gqf5ckk"]
 
 [ext_resource type="Texture2D" uid="uid://drtsrdbcr1r8v" path="res://art/characters/player.png" id="1_1bot2"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_kdon0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_arhq3"]
+radius = 1.70626
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fcad1"]
 atlas = ExtResource("1_1bot2")
@@ -418,12 +421,14 @@ position = Vector2(522, 322)
 scale = Vector2(-9.96328, 4.24069)
 script = ExtResource("1_kdon0")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(29.7091, -15.7993)
+scale = Vector2(1, -2.32965)
+shape = SubResource("CircleShape2D_arhq3")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(51.3887, -74.752)
-scale = Vector2(0.0756423, 0.200078)
+position = Vector2(29.5084, -25.9392)
+scale = Vector2(0.265327, 0.633353)
 sprite_frames = SubResource("SpriteFrames_de387")
 animation = &"side_idle"
 frame_progress = 0.150157
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(1, 0.320866)
