@@ -419,8 +419,8 @@ scale = Vector2(-9.96328, 4.24069)
 script = ExtResource("1_kdon0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(43.8274, -58.026)
-scale = Vector2(0.268925, 0.535907)
+position = Vector2(51.3887, -74.752)
+scale = Vector2(0.0756423, 0.200078)
 sprite_frames = SubResource("SpriteFrames_de387")
 animation = &"side_idle"
 frame_progress = 0.150157
