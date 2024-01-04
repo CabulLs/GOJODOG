@@ -1,2 +1,4 @@
 res://scenes/world.tscn
+res://art/UI_Asset/Default.tres
 res://scenes/player.tscn
+res://scenes/menu.tscn

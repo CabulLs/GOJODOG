@@ -417,12 +417,14 @@ animations = [{
 radius = 0.401474
 
 [node name="player" type="CharacterBody2D"]
+y_sort_enabled = true
 position = Vector2(522, 322)
 scale = Vector2(-9.96328, 4.24069)
 script = ExtResource("1_kdon0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(52.3924, -79.4682)
+y_sort_enabled = true
+position = Vector2(52.4928, -76.1668)
 scale = Vector2(0.100467, 0.221705)
 sprite_frames = SubResource("SpriteFrames_de387")
 animation = &"side_idle"
@@ -430,6 +432,6 @@ frame_progress = 0.150157
 offset = Vector2(0, -15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(52.3924, -79.4682)
+position = Vector2(52.4928, -76.1669)
 scale = Vector2(1, -2.32965)
 shape = SubResource("CircleShape2D_arhq3")

@@ -1,4 +1,8 @@
+Button
+VBoxContainer
+MarginContainer
+TextureRect
+CollisionShape2D
 TileMap
 AnimatedSprite2D
-CollisionShape2D
 CharacterBody2D
