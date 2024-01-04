@@ -417,7 +417,7 @@ animations = [{
 radius = 0.401474
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xukki"]
-radius = 2.70995
+radius = 2.99978
 
 [node name="player" type="CharacterBody2D"]
 light_mask = 3
@@ -442,6 +442,7 @@ shape = SubResource("CircleShape2D_arhq3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
 position = Vector2(0, -1.17905)
+scale = Vector2(0.535338, 1.16723)
 shape = SubResource("CircleShape2D_xukki")
 
 [node name="attack_cooldown" type="Timer" parent="."]
@@ -449,6 +450,18 @@ wait_time = 0.5
 
 [node name="deal_attack_timer" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(7.92912, 49.2844)
+zoom = Vector2(4, 4)
+limit_left = 0
+limit_top = 0
+limit_right = 412
+limit_bottom = 189
+limit_smoothed = true
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]

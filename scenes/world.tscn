@@ -10,36 +10,43 @@
 texture = ExtResource("1_7ew27")
 0:5/size_in_atlas = Vector2i(3, 4)
 0:5/0 = 0
-0:5/0/y_sort_origin = 20
+0:5/0/y_sort_origin = 16
 0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:5/0/physics_layer_0/angular_velocity = 0.0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.48528, 11.3137, 6.36396, 11.3137, 12.3744, 27.5772, -12.7279, 26.163)
 6:7/size_in_atlas = Vector2i(2, 2)
 6:7/0 = 0
 6:7/0/y_sort_origin = 10
 6:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:7/0/physics_layer_0/angular_velocity = 0.0
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14.25, 6.5, 13.25, 5, 11.5, 13.75, -12, 15)
 8:6/size_in_atlas = Vector2i(2, 3)
 8:6/0 = 0
 8:6/0/y_sort_origin = 15
 8:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:6/0/physics_layer_0/angular_velocity = 0.0
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.5, 15.5, 5.75, 15.25, 4.5, 21, -5.25, 20.25)
 10:7/size_in_atlas = Vector2i(2, 2)
 10:7/0 = 0
 10:7/0/y_sort_origin = 7
 10:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 10:7/0/physics_layer_0/angular_velocity = 0.0
+10:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.75, 8, -8, 10.5, 8.75, -11.5, 6.25)
 0:0/0 = 0
 0:0/0/y_sort_origin = 4
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, -5, 5.5, -5, 6, 2, -5.75, 2.25)
 0:1/0 = 0
 0:1/0/y_sort_origin = 5
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.25, -2.25, 4, -3.75, 3.25, 4.25, -5, 3.75)
 5:0/0 = 0
 5:0/0/y_sort_origin = 5
 5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kl373"]
 texture = ExtResource("2_0ewqm")
@@ -159,7 +166,11 @@ layer_2/name = "ysort"
 layer_2/y_sort_enabled = true
 layer_2/tile_data = PackedInt32Array(131080, 0, 5, 589825, 0, 5, 327691, 393216, 7, 393239, 524288, 6, 393240, 524288, 6, 393241, 524288, 6, 65553, 393216, 7, 65539, 393216, 7, 458770, 0, 0, 655375, 0, 1, 65546, 0, 1, 65551, 655360, 7, 131084, 0, 1, 65541, 0, 1, 1, 0, 1, 655363, 0, 1, 589843, 0, 1, 458772, 0, 1, 196622, 393216, 7, 12, 655360, 7, 327701, 655360, 7, 262168, 655360, 7, 19, 655360, 7, 720904, 393216, 7, 720909, 393216, 7)
 
-[node name="player" parent="." instance=ExtResource("4_36wwo")]
-
 [node name="Enemy" parent="." instance=ExtResource("5_l3l7b")]
 position = Vector2(98, 105)
+
+[node name="player" parent="." instance=ExtResource("4_36wwo")]
+position = Vector2(171, 133)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(411, 158)
