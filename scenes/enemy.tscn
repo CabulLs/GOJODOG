@@ -141,7 +141,7 @@ script = ExtResource("1_nu5wt")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_oatrx")
 animation = &"idle"
-frame_progress = 0.0822585
+frame_progress = 0.25428
 offset = Vector2(0, -6)
 
 [node name="detection_area" type="Area2D" parent="."]

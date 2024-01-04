@@ -1,3 +1,11 @@
-res://scenes/player.tscn
 res://scenes/world.tscn
+res://scenes/player.tscn
+res://scripts/global.gd
+res://scripts/player.gd
+res://scenes/world.gd
+res://scenes/cliff_side.tscn
+res://scenes/cliff_side.gd
+res://scripts/Enemy.gd
 res://scenes/enemy.tscn
+res://scenes/menu.tscn
+res://art/UI_Asset/Default.tres

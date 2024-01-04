@@ -17,6 +17,7 @@ func _physics_process(_delta):
 	player_movement(_delta)
 	enemy_attack()
 	attack()
+	current_camera()
 	
 	if health <= 0:
 		player_alive = false  #kembali ke respon awal 
@@ -29,25 +30,26 @@ func player_movement(_delta):
 	
 	if Input.is_action_pressed("ui_right"):
 		current_dir ="right"
-		play_anim(0)
+		play_anim(1)
 		velocity.x = speed
 		velocity.y = 0
 	elif Input.is_action_pressed("ui_left"):
 		current_dir ="left"
-		play_anim(0)
+		play_anim(1)
 		velocity.x = -speed
 		velocity.y = 0
 	elif Input.is_action_pressed("ui_down"):
 		current_dir ="down"
-		play_anim(0)
+		play_anim(1)
 		velocity.y = speed
 		velocity.x = 0
 	elif Input.is_action_pressed("ui_up"):
 		current_dir ="up"
-		play_anim(0)
+		play_anim(1)
 		velocity.y = -speed
 		velocity.x = 0
 	else:
+		play_anim(0)
 		velocity.x = 0
 		velocity.y = 0
 	
@@ -64,7 +66,7 @@ func play_anim(movement):
 		elif movement == 0:
 			if attack_ip == false:
 				anim.play("side_idle")
-	elif dir == "left":
+	if dir == "left":
 		anim.flip_h = false
 		if movement == 1:
 			anim.play("side_walk")
@@ -72,14 +74,14 @@ func play_anim(movement):
 			if attack_ip == false:
 				anim.play("side_idle")
 
-	elif dir == "down":
+	if dir == "down":
 		anim.flip_h = true
 		if movement == 1:
 			anim.play("front_walk")
 		elif movement == 0:
 			if attack_ip == false:
 				anim.play("front_idle")
-	elif dir == "up":
+	if dir == "up":
 		anim.flip_h = true
 		if movement == 1:
 			anim.play("back_walk")
@@ -136,3 +138,12 @@ func _on_deal_attack_timer_timeout():
 	$deal_attack_timer.stop()
 	global.player_current_attack = false
 	attack_ip = false
+	
+func current_camera():
+	if global.current_scene == "world":
+		$world_camera.enabled = true
+		$cliffside_camera.enabled = false
+	elif global.current_scene == "cliff_side":
+		$world_camera.enabled = false
+		$cliffside_camera.enabled = true
+	

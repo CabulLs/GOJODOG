@@ -429,8 +429,8 @@ script = ExtResource("1_kdon0")
 y_sort_enabled = true
 scale = Vector2(0.100467, 0.221705)
 sprite_frames = SubResource("SpriteFrames_de387")
-animation = &"side_idle"
-frame_progress = 0.150157
+animation = &"side_attack"
+frame_progress = 0.00563993
 offset = Vector2(0, -15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -451,12 +451,24 @@ wait_time = 0.5
 [node name="deal_attack_timer" type="Timer" parent="."]
 wait_time = 0.5
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(7.92912, 49.2844)
+[node name="world_camera" type="Camera2D" parent="."]
+position = Vector2(-0.401474, 0.707432)
 zoom = Vector2(4, 4)
 limit_left = 0
 limit_top = 0
-limit_right = 412
+limit_right = 414
+limit_bottom = 189
+limit_smoothed = true
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="cliffside_camera" type="Camera2D" parent="."]
+position = Vector2(-0.60221, 0.707432)
+zoom = Vector2(4, 4)
+limit_left = 0
+limit_top = 0
+limit_right = 414
 limit_bottom = 189
 limit_smoothed = true
 position_smoothing_enabled = true
