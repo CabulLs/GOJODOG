@@ -1,5 +1,4 @@
 res://scenes/world.tscn
-res://art/UI_Asset/Default.tres
+res://Enemy.gd
 res://scenes/player.tscn
-res://scenes/menu.tscn
-res://scenes/menu.gd
+res://scenes/enemy.tscn
