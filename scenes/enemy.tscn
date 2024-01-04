@@ -1,6 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://djhnlf1745jdp"]
+[gd_scene load_steps=22 format=3 uid="uid://djhnlf1745jdp"]
 
-[ext_resource type="Script" path="res://Enemy.gd" id="1_r766y"]
+[ext_resource type="Script" path="res://scripts/Enemy.gd" id="1_nu5wt"]
 [ext_resource type="Texture2D" uid="uid://cr2p0a8l3h0w8" path="res://art/characters/slime.png" id="2_hj8sr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v55is"]
@@ -132,8 +132,10 @@ radius = 21.0238
 [sub_resource type="CircleShape2D" id="CircleShape2D_2q4om"]
 radius = 6.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_1ocro"]
+
 [node name="Enemy" type="CharacterBody2D"]
-script = ExtResource("1_r766y")
+script = ExtResource("1_nu5wt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_oatrx")
@@ -150,4 +152,16 @@ shape = SubResource("CircleShape2D_lsgx6")
 position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_2q4om")
 
+[node name="enemy_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_1ocro")
+
+[node name="take_damge_cooldown" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_entered" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_entered"]
+[connection signal="body_exited" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_exited"]
+[connection signal="timeout" from="take_damge_cooldown" to="." method="_on_take_damge_cooldown_timeout"]
