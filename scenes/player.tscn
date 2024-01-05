@@ -452,7 +452,7 @@ wait_time = 0.5
 wait_time = 0.5
 
 [node name="world_camera" type="Camera2D" parent="."]
-position = Vector2(-0.401474, 0.707432)
+position = Vector2(0, 0.707)
 zoom = Vector2(4, 4)
 limit_left = 0
 limit_top = 0
@@ -484,6 +484,7 @@ offset_bottom = 28.6507
 rotation = 3.13968
 scale = Vector2(0.03, 0.03)
 show_percentage = false
+metadata/_edit_use_anchors_ = true
 
 [node name="regin_timer" type="Timer" parent="."]
 wait_time = 5.0

@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://dy4rh1yveee40"]
+
+[ext_resource type="Script" path="res://dialogues/dialogue.gd" id="1_ijvj1"]
+[ext_resource type="Texture2D" uid="uid://c46k1b2cou5d4" path="res://art/UI_Asset/dialogue_box.png" id="2_2fiie"]
+
+[node name="Dialogue" type="CanvasLayer"]
+script = ExtResource("1_ijvj1")
+d_file = "res://dialogues/json/rpg_chat.json"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 180.0
+offset_bottom = 39.0
+scale = Vector2(1.28, 1.76)
+texture = ExtResource("2_2fiie")
+region_rect = Rect2(1.77765, 1.64603, 28.4444, 28.7078)
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 54.0
+offset_bottom = 24.0
+scale = Vector2(0.498992, 0.586457)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Nama"
+fit_content = true
+
+[node name="Chat" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 12.0
+offset_right = 406.0
+offset_bottom = 62.0
+scale = Vector2(0.399999, 0.400001)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Perkataan"
