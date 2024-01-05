@@ -475,7 +475,22 @@ position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
+[node name="healthbar" type="ProgressBar" parent="."]
+modulate = Color(0.129412, 0.690196, 0, 1)
+offset_left = 0.903317
+offset_top = 1.65068
+offset_right = 61.9033
+offset_bottom = 28.6507
+rotation = 3.13968
+scale = Vector2(0.03, 0.03)
+show_percentage = false
+
+[node name="regin_timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
 [connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]
 [connection signal="timeout" from="deal_attack_timer" to="." method="_on_deal_attack_timer_timeout"]
+[connection signal="timeout" from="regin_timer" to="." method="_on_regin_timer_timeout"]

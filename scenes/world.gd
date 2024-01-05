@@ -23,7 +23,7 @@ func _on_cliffside_transition_point_body_entered(body):
 
 func _on_cliffside_transition_point_body_exited(body):
 	if body.has_method("player"):
-		global.transition_scene = false
+		global.transition_scene = true
 		
 func change_scene():
 	if global.transition_scene == true:

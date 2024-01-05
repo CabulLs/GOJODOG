@@ -1,10 +1,11 @@
+ProgressBar
+Timer
 CollisionShape2D
 Area2D
 CollisionPolygon2D
 StaticBody2D
 TileMap
 Camera2D
-Timer
 AnimatedSprite2D
 CharacterBody2D
 Button
