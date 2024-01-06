@@ -58,11 +58,11 @@ shape = SubResource("CircleShape2D_bc6jh")
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="farmer_area" type="Area2D" parent="."]
 collision_layer = 3
 script = ExtResource("3_pxr0c")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="farmer_area"]
 shape = SubResource("CircleShape2D_5xwec")
 
 [node name="Dialogue" parent="." instance=ExtResource("4_obw2u")]

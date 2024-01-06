@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqtjm67vw64y8"]
+[gd_scene load_steps=5 format=3 uid="uid://bqtjm67vw64y8"]
 
 [ext_resource type="TileSet" uid="uid://bhmryj4i8va0c" path="res://scenes/terrain_path.tres" id="1_q3agy"]
 [ext_resource type="PackedScene" uid="uid://30ei8gqf5ckk" path="res://scenes/player.tscn" id="2_fek5l"]
+[ext_resource type="PackedScene" uid="uid://djhnlf1745jdp" path="res://scenes/enemy.tscn" id="3_854uk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4u65m"]
 size = Vector2(39.5, 22.1875)
@@ -34,3 +35,27 @@ position = Vector2(13, 39)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ranch_transition_point"]
 position = Vector2(274.25, 307.094)
 shape = SubResource("RectangleShape2D_4u65m")
+
+[node name="Enemy" parent="." instance=ExtResource("3_854uk")]
+position = Vector2(223, 27)
+
+[node name="Enemy7" parent="." instance=ExtResource("3_854uk")]
+position = Vector2(151, 91)
+
+[node name="Enemy8" parent="." instance=ExtResource("3_854uk")]
+position = Vector2(282, 205)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_854uk")]
+position = Vector2(227, 95)
+
+[node name="Enemy3" parent="." instance=ExtResource("3_854uk")]
+position = Vector2(177, 157)
+
+[node name="Enemy4" parent="." instance=ExtResource("3_854uk")]
+position = Vector2(56, 186)
+
+[node name="Enemy5" parent="." instance=ExtResource("3_854uk")]
+position = Vector2(121, 212)
+
+[node name="Enemy6" parent="." instance=ExtResource("3_854uk")]
+position = Vector2(314, 129)

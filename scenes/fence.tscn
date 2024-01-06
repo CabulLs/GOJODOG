@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3 uid="uid://b4up081gcmxs6"]
+
+[ext_resource type="Texture2D" uid="uid://bso7us5ysoe51" path="res://art/tilesets/fences.png" id="1_1hge3"]
+[ext_resource type="Script" path="res://scenes/fence.gd" id="1_4qsvs"]
+[ext_resource type="Script" path="res://scenes/fence_area.gd" id="3_sqfvo"]
+[ext_resource type="PackedScene" uid="uid://bh2y3symfybei" path="res://dialogues/dialogue_4.tscn" id="4_6thrg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ep07k"]
+atlas = ExtResource("1_1hge3")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2rhvr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ep07k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ffq5"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d5rcu"]
+radius = 18.0
+
+[node name="fence" type="CharacterBody2D"]
+script = ExtResource("1_4qsvs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2rhvr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_8ffq5")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="fence_area" type="Area2D" parent="."]
+collision_layer = 3
+script = ExtResource("3_sqfvo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fence_area"]
+shape = SubResource("CircleShape2D_d5rcu")
+
+[node name="Dialogue4" parent="." instance=ExtResource("4_6thrg")]

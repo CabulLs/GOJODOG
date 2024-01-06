@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://bqmq78im6g0hc"]
+
+[ext_resource type="Script" path="res://scenes/sign.gd" id="1_eexw8"]
+[ext_resource type="Texture2D" uid="uid://dd3dq0178lfo" path="res://art/objects/objects.png" id="3_6k7nm"]
+[ext_resource type="Script" path="res://scenes/sign_area.gd" id="3_lix6f"]
+[ext_resource type="PackedScene" uid="uid://c86h7k21y7jq4" path="res://dialogues/dialogue_2.tscn" id="3_wxw0v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2o2pe"]
+atlas = ExtResource("3_6k7nm")
+region = Rect2(0, 0, 16, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jiocj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2o2pe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ffq5"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d5rcu"]
+radius = 18.0
+
+[node name="Sign" type="CharacterBody2D"]
+script = ExtResource("1_eexw8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jiocj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_8ffq5")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="sign_area" type="Area2D" parent="."]
+collision_layer = 3
+script = ExtResource("3_lix6f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sign_area"]
+shape = SubResource("CircleShape2D_d5rcu")
+
+[node name="Dialogue2" parent="." instance=ExtResource("3_wxw0v")]
+offset = Vector2(0, 440)
+scale = Vector2(5, 3)
+transform = Transform2D(5, 0, 0, 3, 0, 440)

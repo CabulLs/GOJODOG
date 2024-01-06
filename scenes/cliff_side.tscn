@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://blq1rxwk2v8qq"]
+[gd_scene load_steps=7 format=3 uid="uid://blq1rxwk2v8qq"]
 
 [ext_resource type="TileSet" uid="uid://bhmryj4i8va0c" path="res://scenes/terrain_path.tres" id="1_dc8es"]
 [ext_resource type="Script" path="res://scenes/cliff_side.gd" id="1_uaek8"]
 [ext_resource type="PackedScene" uid="uid://30ei8gqf5ckk" path="res://scenes/player.tscn" id="2_7mfsh"]
+[ext_resource type="PackedScene" uid="uid://djhnlf1745jdp" path="res://scenes/enemy.tscn" id="4_fnsk6"]
+[ext_resource type="PackedScene" uid="uid://bqmq78im6g0hc" path="res://scenes/sign.tscn" id="4_i02yx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_thomd"]
 size = Vector2(72.5, 95.5)
@@ -29,6 +31,12 @@ position = Vector2(105, -112)
 rotation = 3.14159
 scale = Vector2(9.96328, -4.24069)
 
+[node name="Enemy3" parent="." instance=ExtResource("4_fnsk6")]
+position = Vector2(54, 140)
+
+[node name="Enemy" parent="." instance=ExtResource("4_fnsk6")]
+position = Vector2(118, 100)
+
 [node name="collisions" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collisions"]
@@ -38,8 +46,14 @@ polygon = PackedVector2Array(51, -44, 59, -9, 51, -3, -21, -6, -21, 205, 7, 206,
 position = Vector2(76, 90)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cliffside_exitpoint"]
-position = Vector2(315.25, 37.75)
+position = Vector2(296, 37)
 shape = SubResource("RectangleShape2D_thomd")
+
+[node name="Enemy2" parent="." instance=ExtResource("4_fnsk6")]
+position = Vector2(168, 151)
+
+[node name="Sign" parent="." instance=ExtResource("4_i02yx")]
+position = Vector2(189, 32)
 
 [connection signal="body_entered" from="cliffside_exitpoint" to="." method="_on_cliffside_exitpoint_body_entered"]
 [connection signal="body_exited" from="cliffside_exitpoint" to="." method="_on_cliffside_exitpoint_body_exited"]

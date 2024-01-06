@@ -1,8 +1,15 @@
 [
-	  {"name": "John", "text": "ahhh pagi pagi lainnya...."},
 	  {"name": "John", "text": "??"},
-	  {"name": "John", "text": "Pak Farmer??"},
+	  {"name": "John", "text": "Pak Greg??"},
 	  {"name": "John", "text": "Tumben sekali.."},
+	  {"name": "Greg", "text": "Uhm, halo John"},
+	  {"name": "Greg", "text": "Begini langsung ke intinya saja, Peternakanku diganggu slime"},
+	  {"name": "John", "text": "Lalu?"},
+	  {"name": "Greg", "text": "Yah, bisa membantuku membasminya?"},
+	  {"name": "John", "text": "Tentu"},
+	  {"name": "Greg", "text": "Oh ya? Terimakasih John"}
+
+
 
 
 

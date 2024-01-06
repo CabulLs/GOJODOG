@@ -1,4 +1,6 @@
 CollisionPolygon2D
+AnimatedSprite2D
+CharacterBody2D
 TileMap
 TextEdit
 Camera2D
@@ -6,8 +8,6 @@ Timer
 CollisionShape2D
 Node2D
 Area2D
-AnimatedSprite2D
-CharacterBody2D
 RichTextLabel
 NinePatchRect
 CanvasLayer

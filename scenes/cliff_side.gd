@@ -16,7 +16,7 @@ func _process(_delta):
 func _on_cliffside_exitpoint_body_entered(body):
 	if body.has_method("player"):
 		global.transition_scene = true
-	print("masuk")
+	#print("masuk")
 
 func _on_cliffside_exitpoint_body_exited(body):
 	if body.has_method("player"):
@@ -24,9 +24,10 @@ func _on_cliffside_exitpoint_body_exited(body):
 		
 func change_scenes():
 	if global.transition_scene == true:
-		if global.current_scene == "cliff_side":
+		#if global.current_scene == "cliff_side":
 			get_tree().change_scene_to_file("res://scenes/world.tscn")
 			global.game_first_loadin = false
 			global.finish_changescenes()
+			print(global.current_scene)
 		
 		

@@ -14,15 +14,15 @@ var game_first_loadin = true
 
 func finish_changescenes():
 	if transition_scene == true:
-		transition_scene = false
-		if current_scene == "world":
-			current_scene = "world_2"
-		if current_scene == "cliff_side":
-			current_scene = "world"
 		if current_scene == "house":
 			current_scene = "home"
-		if current_scene == "home":
-			current_scene = "cliff_side"
+		#if current_scene == "home":
+			#current_scene = "cliff_side"
+		if current_scene == "cliff_side":
+			current_scene = "world"
+		#if current_scene == "world":
+			#current_scene = "world_2"
+		transition_scene = false
 
 			
 		

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://uqdp8ohe5vb0"]
+[gd_scene load_steps=6 format=3 uid="uid://uqdp8ohe5vb0"]
 
 [ext_resource type="Script" path="res://scenes/home.gd" id="1_7bfru"]
 [ext_resource type="TileSet" uid="uid://bhmryj4i8va0c" path="res://scenes/terrain_path.tres" id="1_xcy3d"]
 [ext_resource type="PackedScene" uid="uid://30ei8gqf5ckk" path="res://scenes/player.tscn" id="2_qq4vf"]
+[ext_resource type="PackedScene" uid="uid://b5pwgbveqqs40" path="res://scenes/farmer.tscn" id="4_2538e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ogfo"]
 size = Vector2(53.5, 34.5)
@@ -38,8 +39,11 @@ polygon = PackedVector2Array(57, 425, -16, 425, -20, 406, -64, 408, -69, 377, -8
 [node name="cliffside_transition_point" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cliffside_transition_point"]
-position = Vector2(84.25, 438)
+position = Vector2(84, 437)
 shape = SubResource("RectangleShape2D_0ogfo")
+
+[node name="farmer" parent="." instance=ExtResource("4_2538e")]
+position = Vector2(117, 349)
 
 [connection signal="body_entered" from="cliffside_transition_point" to="." method="_on_cliffside_transition_point_body_entered"]
 [connection signal="body_exited" from="cliffside_transition_point" to="." method="_on_cliffside_transition_point_body_exited"]
