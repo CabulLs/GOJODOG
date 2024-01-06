@@ -36,3 +36,7 @@ offset_bottom = 62.0
 scale = Vector2(0.399999, 0.400001)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "Perkataan"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true

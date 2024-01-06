@@ -8,7 +8,7 @@ var d_active = false
 
 func _ready():
 	$NinePatchRect.visible = false
-	start()
+	
 	
 func start():
 	if d_active:
@@ -38,7 +38,7 @@ func next_script():
 	current_dialogue_id += 1
 	
 	if current_dialogue_id >= len(dialogue):
-		d_active = false
+		$Timer.start()
 		$NinePatchRect.visible = false
 		return
 	
@@ -47,4 +47,4 @@ func next_script():
 
 
 func _on_timer_timeout():
-	pass # Replace with function body.
+	d_active = false

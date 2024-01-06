@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://b5pwgbveqqs40"]
+
+[ext_resource type="Script" path="res://farmer.gd" id="1_1qjpa"]
+[ext_resource type="Texture2D" uid="uid://d3u7ctmx8ceoh" path="res://art/characters/IdleCycle_Spreadsheet.png" id="2_0goql"]
+[ext_resource type="Script" path="res://scenes/npc_dialogue.gd" id="3_pxr0c"]
+[ext_resource type="PackedScene" uid="uid://dy4rh1yveee40" path="res://dialogues/dialogue.tscn" id="4_obw2u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trass"]
+atlas = ExtResource("2_0goql")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21igh"]
+atlas = ExtResource("2_0goql")
+region = Rect2(1024, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekh47"]
+atlas = ExtResource("2_0goql")
+region = Rect2(0, 1024, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7fvvl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trass")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21igh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekh47")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bc6jh"]
+radius = 63.7372
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5xwec"]
+radius = 224.998
+
+[node name="farmer" type="CharacterBody2D"]
+scale = Vector2(0.0800008, 0.0799997)
+collision_layer = 3
+script = ExtResource("1_1qjpa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_7fvvl")
+animation = &"idle"
+frame_progress = 0.208449
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 50.0002)
+shape = SubResource("CircleShape2D_bc6jh")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+script = ExtResource("3_pxr0c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_5xwec")
+
+[node name="Dialogue" parent="." instance=ExtResource("4_obw2u")]
+offset = Vector2(0, 440)
+scale = Vector2(5, 3)
+transform = Transform2D(5, 0, 0, 3, 0, 440)

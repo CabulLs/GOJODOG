@@ -11,17 +11,13 @@ config_version=5
 [application]
 
 config/name="Benny"
-run/main_scene="res://dialogues/dialogue.tscn"
+run/main_scene="res://scenes/house.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://art/icon.svg"
 
 [autoload]
 
 global="*res://scripts/global.gd"
-
-[display]
-
-window/stretch/scale=4.0
 
 [input]
 

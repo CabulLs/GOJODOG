@@ -426,7 +426,6 @@ scale = Vector2(-9.96328, 4.24069)
 script = ExtResource("1_kdon0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-y_sort_enabled = true
 scale = Vector2(0.100467, 0.221705)
 sprite_frames = SubResource("SpriteFrames_de387")
 animation = &"side_attack"
@@ -451,30 +450,6 @@ wait_time = 0.5
 [node name="deal_attack_timer" type="Timer" parent="."]
 wait_time = 0.5
 
-[node name="world_camera" type="Camera2D" parent="."]
-position = Vector2(0, 0.707)
-zoom = Vector2(4, 4)
-limit_left = 0
-limit_top = 0
-limit_right = 414
-limit_bottom = 189
-limit_smoothed = true
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-
-[node name="cliffside_camera" type="Camera2D" parent="."]
-position = Vector2(-0.60221, 0.707432)
-zoom = Vector2(4, 4)
-limit_left = 0
-limit_top = 0
-limit_right = 414
-limit_bottom = 189
-limit_smoothed = true
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-
 [node name="healthbar" type="ProgressBar" parent="."]
 modulate = Color(0.129412, 0.690196, 0, 1)
 offset_left = 0.903317
@@ -489,6 +464,9 @@ metadata/_edit_use_anchors_ = true
 [node name="regin_timer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4.8, 4.8)
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
