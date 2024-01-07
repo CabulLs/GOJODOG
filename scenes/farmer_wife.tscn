@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://k77r5bprarxk"]
+
+[ext_resource type="Texture2D" uid="uid://cwjh1ajkb7510" path="res://art/characters/elizabeth.png" id="1_eqgyg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wca1l"]
+atlas = ExtResource("1_eqgyg")
+region = Rect2(528, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1x28"]
+atlas = ExtResource("1_eqgyg")
+region = Rect2(432, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7d6qu"]
+atlas = ExtResource("1_eqgyg")
+region = Rect2(480, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_783ss"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wca1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1x28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7d6qu")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bc6jh"]
+radius = 63.7372
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5xwec"]
+radius = 224.998
+
+[node name="farmer_wife" type="CharacterBody2D"]
+scale = Vector2(0.0800008, 0.0799997)
+collision_layer = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(12.7498, 19.0001)
+scale = Vector2(7.80201, 7.54169)
+sprite_frames = SubResource("SpriteFrames_783ss")
+animation = &"new_animation"
+frame_progress = 0.89985
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 50.0002)
+shape = SubResource("CircleShape2D_bc6jh")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="farmer_wife_area" type="Area2D" parent="."]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="farmer_wife_area"]
+position = Vector2(-1.52588e-05, 0)
+shape = SubResource("CircleShape2D_5xwec")

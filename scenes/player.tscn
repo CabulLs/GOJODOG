@@ -420,6 +420,7 @@ radius = 0.401474
 radius = 2.99978
 
 [node name="player" type="CharacterBody2D"]
+process_mode = 1
 light_mask = 3
 y_sort_enabled = true
 scale = Vector2(-9.96328, 4.24069)
