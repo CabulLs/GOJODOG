@@ -1,9 +1,10 @@
-res://scenes/menu.tscn
+res://scenes/world.tscn
 res://scenes/terrain_path.tres
 res://art/UI_Asset/Default.tres
-res://scenes/farmer_wife.tscn
-res://scenes/world.tscn
-res://scenes/farmer_wife.gd
-res://scenes/farmer_wife_area.gd
+res://scenes/world_2.tscn
 res://scenes/player.tscn
-res://scenes/PauseMenu.gd
+res://scenes/menu.tscn
+res://scenes/farmer.tscn
+res://scenes/farmer_wife.tscn
+res://scenes/game_over.tscn
+res://scenes/home.tscn

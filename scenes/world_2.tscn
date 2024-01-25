@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqtjm67vw64y8"]
+[gd_scene load_steps=6 format=3 uid="uid://bqtjm67vw64y8"]
 
 [ext_resource type="TileSet" uid="uid://bhmryj4i8va0c" path="res://scenes/terrain_path.tres" id="1_q3agy"]
+[ext_resource type="Script" path="res://scenes/world_2.gd" id="1_rur5l"]
 [ext_resource type="PackedScene" uid="uid://30ei8gqf5ckk" path="res://scenes/player.tscn" id="2_fek5l"]
 [ext_resource type="PackedScene" uid="uid://djhnlf1745jdp" path="res://scenes/enemy.tscn" id="3_854uk"]
 
@@ -8,6 +9,7 @@
 size = Vector2(39.5, 22.1875)
 
 [node name="world2" type="Node2D"]
+script = ExtResource("1_rur5l")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -59,3 +61,6 @@ position = Vector2(121, 212)
 
 [node name="Enemy6" parent="." instance=ExtResource("3_854uk")]
 position = Vector2(314, 129)
+
+[connection signal="body_entered" from="ranch_transition_point" to="." method="_on_ranch_transition_point_body_entered"]
+[connection signal="body_exited" from="ranch_transition_point" to="." method="_on_ranch_transition_point_body_exited"]

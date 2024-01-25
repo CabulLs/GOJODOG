@@ -25,6 +25,7 @@ func _physics_process(_delta):
 		health = 0
 		print("player has been killed")
 		self.queue_free()
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 	
 func player_movement(_delta):
 	#var velocity = Vector2()
@@ -166,3 +167,4 @@ func _on_regin_timer_timeout():
 			health = 100
 	if health <= 0:
 		health = 0 
+

@@ -1,3 +1,5 @@
+Label
+TextEdit
 VBoxContainer
 Node2D
 Button
@@ -5,7 +7,6 @@ AnimatedSprite2D
 CollisionPolygon2D
 CharacterBody2D
 TileMap
-TextEdit
 Camera2D
 Timer
 CollisionShape2D

@@ -4,8 +4,8 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if global.game_first_loadin == true:
-		$player.position.x = global.player_start_posx
-		$player.position.y = global.player_start_posy
+		#$player.position.x = global.player_start_posx
+		#$player.position.y = global.player_start_posy
 		print(global.current_scene)
 
 
@@ -36,7 +36,7 @@ func _on_cliffside_transition_point_body_exited(body):
 		
 func change_scenes():
 	if global.transition_scene == true:
-		if global.current_scene == "home":
+		#if global.current_scene == "home":
 			get_tree().change_scene_to_file("res://scenes/cliff_side.tscn")
 			global.game_first_loadin = false
 			global.finish_changescenes()

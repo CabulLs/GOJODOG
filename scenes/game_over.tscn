@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://cmwnewckvgedf"]
+
+[ext_resource type="Script" path="res://scenes/game_over.gd" id="1_e2ska"]
+[ext_resource type="Texture2D" uid="uid://c0vlbdkbf16a0" path="res://art/UI_Asset/rpg_BG_clear.png" id="2_j4k3o"]
+[ext_resource type="FontFile" uid="uid://cntrlypt17rlx" path="res://art/UI_Asset/MinimalPixelFont.ttf" id="3_1of84"]
+[ext_resource type="Theme" uid="uid://snnlnqqwnt02" path="res://art/UI_Asset/Default.tres" id="3_73a5m"]
+[ext_resource type="AudioStream" uid="uid://dk6ljtn815yts" path="res://art/UI_Asset/Fire Emblem The Sacred Stones_ 2 Main Theme.wav" id="4_p1kf6"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e2ska")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 7242.0
+offset_bottom = 3929.0
+scale = Vector2(0.158658, 0.164402)
+texture = ExtResource("2_j4k3o")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 217.0
+offset_top = 17.0
+offset_right = 304.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(7.55986, 6.27717)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_1of84")
+theme_override_font_sizes/font_size = 32
+text = "Game Over"
+
+[node name="PlayAgain" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_73a5m")
+text = "MAIN LAGI"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_p1kf6")
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PlayAgain" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PlayAgain" to="." method="_on_play_again_pressed"]
